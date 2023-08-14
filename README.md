@@ -8,4 +8,5 @@ New people would to contribute to the project would be great, you can also join 
 
 # IMPORTANT
 Please keep all game assets from all branches.
+
 Please dont just copy and paste code from ghidra make it look nice
