@@ -6,6 +6,6 @@ The goal for this project is the decompile the game but also rewrite parts of th
 
 New people would to contribute to the project would be great, you can also join are discord server right here https://discord.com/invite/2GSXcEzPJA
 
-## Rules
+# IMPORTANT
 Please keep all game assets from all branches.
 Please dont just copy and paste code from ghidra make it look nice
