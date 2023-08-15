@@ -2,9 +2,9 @@
 
 This is rewrite and decompilation project of the game sly 1 specifically for the May 19, 2002 Prototype build.
 
-The goal for this project is the decompile the game but also rewrite parts of the game that needs to be rewritten to turn into a workable source code.
+The goal for this project is the decompile the game but also rewrite parts of the game that needs to be rewritten to turn into a workable PC source code as a pc port of the game is the end goal.
 
- You can also join are discord server right here https://discord.com/invite/2GSXcEzPJA
+You can also join are discord server right here https://discord.com/invite/2GSXcEzPJA
 
 # IMPORTANT
 Please keep all game assets from all branches.
