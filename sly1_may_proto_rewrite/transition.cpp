@@ -14,7 +14,7 @@ void CTransition::Set(char* pchzWorld, OID oidWarp, OID oidWarpContext, GRFTRANS
 void CTransition::Execute()
 {
 	SetPhase(PHASE_Load); // Setting the global game state to load because where loading a file
-	CBinaryInputStream file("jb_intro"); // THIS IS HERE TEMPORARILY I PLAN ON REWRITING HOW THE GAME LOADS FILES, INSTEAD OF A WAL IM GONNA STORE ALL ASSET FILES IN A FOLDER
+	CBinaryInputStream file("jb_intro"); // THIS IS HERE TEMPORARILY I PLAN ON REWRITING HOW THE GAME LOADS FILES, INSTEAD OF A .WAL FILE IM GONNA STORE ALL LEVEL FILES AND SOUND AND MUSIC IN A FOLDER
 	DeleteSw(g_psw); // Deleting SW object
 	g_psw = nullptr;
 	SetupBulkDataFromBrx(1, &file);
