@@ -21,7 +21,7 @@ void* PloNew(CID cid, SW* parentSW, ALO* paloParent, OID oid, int isplice)
 		SW *sw = new SW(LocalObject);
 		// Storing parent SW address in object header
 		sw->LocalObject.psw = sw;
-		// Storing first parent SW object in objectMap
+		// Storing parent SW object in objectMap
 		AppendDlEntry(sw->PdlFromSwOid(sw, oid), sw);
 		// Initializing SW object
 		sw->InitSw();

@@ -143,6 +143,7 @@
     <ClCompile Include="basic.cpp" />
     <ClCompile Include="bis.cpp" />
     <ClCompile Include="brx.cpp" />
+    <ClCompile Include="dl.cpp" />
     <ClCompile Include="find.cpp" />
     <ClCompile Include="gl.cpp" />
     <ClCompile Include="glad.c" />
@@ -153,12 +154,14 @@
     <ClCompile Include="spaprops.cpp" />
     <ClCompile Include="sw.cpp" />
     <ClCompile Include="transition.cpp" />
+    <ClCompile Include="vis.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="alo.h" />
     <ClInclude Include="basic.h" />
     <ClInclude Include="bis.h" />
     <ClInclude Include="brx.h" />
+    <ClInclude Include="dl.h" />
     <ClInclude Include="find.h" />
     <ClInclude Include="gl.h" />
     <ClInclude Include="lo.h" />
@@ -167,6 +170,7 @@
     <ClInclude Include="so.h" />
     <ClInclude Include="sw.h" />
     <ClInclude Include="transition.h" />
+    <ClInclude Include="vis.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="spaprops.h" />
