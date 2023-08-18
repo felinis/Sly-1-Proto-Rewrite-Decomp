@@ -10,3 +10,5 @@ You can also join are discord server right here https://discord.com/invite/2GSXc
 Please keep all game assets from all branches.
 
 Please dont just copy and paste code from ghidra make it look nice.
+
+It would be very appreciated if you actually try to understand functions and things thats going on instead of just copying stuff over
