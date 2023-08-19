@@ -60,9 +60,6 @@
     <ClCompile Include="dl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vis.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -102,9 +99,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="vis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

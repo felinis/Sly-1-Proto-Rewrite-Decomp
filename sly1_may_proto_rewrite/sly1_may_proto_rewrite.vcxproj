@@ -154,7 +154,6 @@
     <ClCompile Include="spaprops.cpp" />
     <ClCompile Include="sw.cpp" />
     <ClCompile Include="transition.cpp" />
-    <ClCompile Include="vis.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="alo.h" />
@@ -170,7 +169,6 @@
     <ClInclude Include="so.h" />
     <ClInclude Include="sw.h" />
     <ClInclude Include="transition.h" />
-    <ClInclude Include="vis.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="spaprops.h" />
