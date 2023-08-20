@@ -11,24 +11,34 @@ void LO::SetLoDefaults(LO *parentLo)
 
 }
 
-void LO::AddLo(LO *parentLo)
+void LO::AddLo(LO *plo)
 {
 	// Loading object's parent
-	void* objectParent = parentLo->paloParent;
-	DL objectsChild;
+	ALO *objectParent = (ALO*)plo->paloParent;
+	// Loading objects parent child list
+	DL *objectsChild = &objectParent->dlChild;
 
 	// If object doesnt have a parent load up the static world dlChild
 	if (objectParent == nullptr)
 	{
 		// Loading parent SW
-		SW* psw = (SW*)parentLo->psw;
-		objectsChild = psw->dlChild;
+		SW* psw = (SW*)plo->psw;
+		// Loading SW dlChild
+		objectsChild = &psw->dlChild;
+	}
+
+	// Returns if parent LO or SW has a child object or not
+	bool isFound = FFindDlEntry(objectsChild, plo);
+
+	if (isFound == 0)
+	{
+		AppendDlEntry(objectsChild, plo);
 	}
 }
 
-SW::SW(LO LocalObject)
+SW::SW(LO plo)
 {
-	this->LocalObject = LocalObject;
+	LocalObject = plo;
 
 	for (int i = 0; i < 0x200; i++)
 		InitDl(&objectParents[i], 0xC);

@@ -120,14 +120,14 @@ int CSolveQuadratic(float a, float b, float c, float *solutions)
 //return the sine and cosine of the given angle
 void CalculateSinCos(float angle, float *sin, float *cos)
 {
-	uint uVar1;
+	uint32_t uVar1;
 	float fVar2;
 	float fVar3;
 	float fVar4;
 	float fVar5;
 
 	fVar2 = (angle + PI/2) * 0.3183099;
-	uVar1 = (uint)fVar2;
+	uVar1 = (uint32_t)fVar2;
 	if (fVar2 < 0.0)
 		uVar1 = uVar1 - 1;
 	fVar2 = angle - (float)uVar1 * PI;
@@ -152,23 +152,23 @@ void CalculateSinCos(float angle, float *sin, float *cos)
 
 double GTrunc(double param_1)
 {
-	ulong uVar1;
-	ulong uVar2;
+	uint64_t uVar1;
+	uint64_t uVar2;
 	int iVar3;
 
-	iVar3 = ((uint)((ulong)param_1 >> 0x34) & 0x7ff) - 0x3ff;
+	iVar3 = ((uint32_t)((uint64_t)param_1 >> 0x34) & 0x7ff) - 0x3ff;
 	if (iVar3 < 0)
 		param_1 = 0.0;
 	else
 	{
 		if (iVar3 < 0x34)
 		{
-			uVar2 = (ulong)param_1 & 0xfffffffffffff;
+			uVar2 = (uint64_t)param_1 & 0xfffffffffffff;
 			uVar1 = (1 << (long)(0x34 - iVar3)) - 1;
 			if ((uVar2 & uVar1) == uVar1)
-				param_1 = (double)((ulong)param_1 & 0xfff0000000000000 | uVar2 & ~uVar1) + 1.0;
+				param_1 = (double)((uint64_t)param_1 & 0xfff0000000000000 | uVar2 & ~uVar1) + 1.0;
 			else
-				param_1 = (double)((ulong)param_1 & 0xfff0000000000000 | uVar2 & ~uVar1);
+				param_1 = (double)((uint64_t)param_1 & 0xfff0000000000000 | uVar2 & ~uVar1);
 		}
 	}
 	return param_1;
@@ -176,13 +176,13 @@ double GTrunc(double param_1)
 
 float GTrunc(float param_1)
 {
-	uint uVar1;
+	uint32_t uVar1;
 	int iVar2;
-	uint uVar3;
-	ulong local_10;
+	uint32_t uVar3;
+	uint64_t local_10;
 
-	local_10 = (ulong)(uint)param_1;
-	iVar2 = ((uint)((local_10 << 9) >> 0x20) & 0xff) - 0x7f;
+	local_10 = (uint64_t)(uint32_t)param_1;
+	iVar2 = ((uint32_t)((local_10 << 9) >> 0x20) & 0xff) - 0x7f;
 	if (iVar2 < 0)
 		param_1 = 0.0;
 	else
@@ -190,11 +190,11 @@ float GTrunc(float param_1)
 		if (iVar2 < 0x17)
 		{
 			uVar1 = (int)(1 << (long)(0x17 - iVar2)) - 1;
-			uVar3 = (uint)param_1 & 0x7fffff;
+			uVar3 = (uint32_t)param_1 & 0x7fffff;
 			if ((uVar3 & uVar1) == uVar1)
-				param_1 = (float)((uint)param_1 & 0xff800000 | uVar3 & ~uVar1) + 1.0f;
+				param_1 = (float)((uint32_t)param_1 & 0xff800000 | uVar3 & ~uVar1) + 1.0f;
 			else
-				param_1 = (float)((uint)param_1 & 0xff800000 | uVar3 & ~uVar1);
+				param_1 = (float)((uint32_t)param_1 & 0xff800000 | uVar3 & ~uVar1);
 		}
 	}
 	return param_1;

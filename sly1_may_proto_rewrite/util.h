@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 //defines a limit
 struct LM
 {

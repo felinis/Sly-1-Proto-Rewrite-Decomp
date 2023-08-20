@@ -31,7 +31,7 @@ class LO
 		void InitLo(LO *parentLo);
 		void SetLoDefaults(LO *parentLo);
 		// Adds LO to parent LO if LO doesnt have a parent it makes LO a parent
-		void AddLo(LO *parentLo);
+		void AddLo(LO *plo);
 };
 
 // Static World
@@ -79,7 +79,7 @@ class SW
 		DL dlCrfod;
 
 		// Initializing object header
-		SW (LO LocalObject);
+		SW (LO plo);
 
 		// Initializing SW object
 		void InitSw();
@@ -100,6 +100,7 @@ class ALO
 	public:
 		// Object header
 		LO localObject;
+		DL dlChild;
 		// Initializing ALO object
 		ALO (CID cid, SW* parentSW, ALO* paloParent, OID oid, int isplice);
 
